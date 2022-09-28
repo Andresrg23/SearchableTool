@@ -8,11 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
         VStack {
             Text("SEARCHABLE TOOLS")
+            List {
+                Text("Martillo")
+                Text("Pala")
+                Text("Taladro")
+                Text("Destornillador")
+                Text("Alicate")
+                Text("Ratchet")
+                Text("Copa")
+                Text("Pulidora")
+                Text("Pinzas")
+                Text("Gato")
+            }
         }
-        .padding()
     }
 }
 
