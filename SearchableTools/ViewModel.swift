@@ -10,23 +10,28 @@ import Foundation
 
 class ViewModel: ObservableObject {
     
-    @Published var filteredData: [String]?
-    
+    @Published var query = ""
     @Published var tools = [
-        "Martillo",
-        "Pala",
-        "Taladro",
-        "Destornillador",
-        "Alicate",
-        "Ratchet",
-        "Copa",
-        "Pulidora",
-        "Pinzas",
-        "Gato"
-    ]
-        
-    func search(with query: String ) {
-        filteredData = query .isEmpty ? tools : tools.filter{ ($0.contains(query))}
-    }
-    
+             "Martillo",
+             "Pala",
+             "Taladro",
+             "Destornillador",
+             "Alicate",
+             "Ratchet",
+             "Copa",
+             "Pulidora",
+             "Pinzas",
+             "Gato"
+         ]
+
+    var filteredData: [String] {
+        if query.isEmpty {
+          return tools
+        } else {
+          return tools.filter {
+            $0.contains(query)
+          }
+        }
+      }
+     
 }
