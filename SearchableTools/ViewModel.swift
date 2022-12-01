@@ -30,6 +30,8 @@ class ViewModel: ObservableObject {
         } else {
           return tools.filter {
             $0.contains(query)
+              
+              
           }
         }
       }
