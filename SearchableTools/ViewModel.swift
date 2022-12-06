@@ -11,6 +11,7 @@ import Foundation
 class ViewModel: ObservableObject {
     
     @Published var query = ""
+
     @Published var tools = [
              "Martillo",
              "Pala",
@@ -23,17 +24,20 @@ class ViewModel: ObservableObject {
              "Pinzas",
              "Gato"
          ]
-
+    
+    var countTools: Int {
+        return tools.count
+    }
+    
     var filteredData: [String] {
         if query.isEmpty {
           return tools
         } else {
           return tools.filter {
             $0.contains(query)
-              
-              
           }
         }
       }
-     
+    
 }
+

@@ -16,6 +16,7 @@
 		D7F3B02128E48C070021EFA0 /* SearchableToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F3B02028E48C070021EFA0 /* SearchableToolsTests.swift */; };
 		D7F3B02B28E48C070021EFA0 /* SearchableToolsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F3B02A28E48C070021EFA0 /* SearchableToolsUITests.swift */; };
 		D7F3B02D28E48C070021EFA0 /* SearchableToolsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F3B02C28E48C070021EFA0 /* SearchableToolsUITestsLaunchTests.swift */; };
+		D7FD5E7A293E568300F4DCDB /* UnitTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FD5E79293E568300F4DCDB /* UnitTestViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		D7F3B02628E48C070021EFA0 /* SearchableToolsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchableToolsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F3B02A28E48C070021EFA0 /* SearchableToolsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableToolsUITests.swift; sourceTree = "<group>"; };
 		D7F3B02C28E48C070021EFA0 /* SearchableToolsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableToolsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D7FD5E79293E568300F4DCDB /* UnitTestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				D7F3B02028E48C070021EFA0 /* SearchableToolsTests.swift */,
+				D7FD5E79293E568300F4DCDB /* UnitTestViewModel.swift */,
 			);
 			path = SearchableToolsTests;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7FD5E7A293E568300F4DCDB /* UnitTestViewModel.swift in Sources */,
 				D7F3B02128E48C070021EFA0 /* SearchableToolsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

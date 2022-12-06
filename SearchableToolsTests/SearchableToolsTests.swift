@@ -8,6 +8,8 @@
 import XCTest
 @testable import SearchableTools
 
+
+
 final class SearchableToolsTests: XCTestCase {
 
     override func setUpWithError() throws {
@@ -32,5 +34,15 @@ final class SearchableToolsTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func numberOfRowsEqual() {
+        let queryIsEmpty = " "
+        
+        let vm = UnitTestViewModel(query: queryIsEmpty)
+        
+        XCTAssertEqual(vm.query, queryIsEmpty)
+        
+    }
+    
 
 }
