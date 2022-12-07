@@ -12,28 +12,25 @@ class ViewModel: ObservableObject {
     
     @Published var query = ""
     @Published var tools = [
-             "Martillo",
-             "Pala",
-             "Taladro",
-             "Destornillador",
-             "Alicate",
-             "Ratchet",
-             "Copa",
-             "Pulidora",
-             "Pinzas",
-             "Gato"
-         ]
+      "Martillo",
+      "Pala",
+      "Taladro",
+      "Destornillador",
+      "Alicate",
+      "Ratchet",
+      "Copa",
+      "Pulidora",
+      "Pinzas",
+      "Gato"
+    ]
 
     var filteredData: [String] {
-        if query.isEmpty {
-          return tools
-        } else {
-          return tools.filter {
-            $0.contains(query)
-              
-              
-          }
+      if query.isEmpty {
+        return tools
+      } else {
+        return tools.filter {
+          $0.contains(query)
         }
       }
-     
+    }
 }

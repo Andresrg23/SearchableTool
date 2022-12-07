@@ -15,7 +15,6 @@
 		D7F3B01728E48C070021EFA0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7F3B01628E48C070021EFA0 /* Preview Assets.xcassets */; };
 		D7F3B02128E48C070021EFA0 /* SearchableToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F3B02028E48C070021EFA0 /* SearchableToolsTests.swift */; };
 		D7F3B02B28E48C070021EFA0 /* SearchableToolsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F3B02A28E48C070021EFA0 /* SearchableToolsUITests.swift */; };
-		D7F3B02D28E48C070021EFA0 /* SearchableToolsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F3B02C28E48C070021EFA0 /* SearchableToolsUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +46,6 @@
 		D7F3B02028E48C070021EFA0 /* SearchableToolsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableToolsTests.swift; sourceTree = "<group>"; };
 		D7F3B02628E48C070021EFA0 /* SearchableToolsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchableToolsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F3B02A28E48C070021EFA0 /* SearchableToolsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableToolsUITests.swift; sourceTree = "<group>"; };
-		D7F3B02C28E48C070021EFA0 /* SearchableToolsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableToolsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +126,6 @@
 			isa = PBXGroup;
 			children = (
 				D7F3B02A28E48C070021EFA0 /* SearchableToolsUITests.swift */,
-				D7F3B02C28E48C070021EFA0 /* SearchableToolsUITestsLaunchTests.swift */,
 			);
 			path = SearchableToolsUITests;
 			sourceTree = "<group>";
@@ -282,7 +279,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7F3B02D28E48C070021EFA0 /* SearchableToolsUITestsLaunchTests.swift in Sources */,
 				D7F3B02B28E48C070021EFA0 /* SearchableToolsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
