@@ -8,5 +8,16 @@
 import XCTest
 
 final class SearchableToolsUITests: XCTestCase {
-
+    
+    func test_searchQuery_ToolName () {
+        
+        let app = XCUIApplication()
+        app.launch()
+        let searchSearchField = app.navigationBars["SEARCH TOOLS"].searchFields["Search"]
+        XCTAssertTrue(searchSearchField.exists)
+        searchSearchField.tap()
+        searchSearchField.typeText("Martillo")
+        
+        
+    }
 }
