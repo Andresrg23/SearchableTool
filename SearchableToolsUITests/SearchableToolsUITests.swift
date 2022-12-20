@@ -17,7 +17,7 @@ final class SearchableToolsUITests: XCTestCase {
         XCTAssertTrue(searchSearchField.exists)
         searchSearchField.tap()
         searchSearchField.typeText("Martillo")
-        
+        XCTAssertEqual(searchSearchField.value as! String, "Martillo")
         
     }
 }
