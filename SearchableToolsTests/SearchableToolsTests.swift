@@ -9,28 +9,39 @@ import XCTest
 @testable import SearchableTools
 
 final class SearchableToolsTests: XCTestCase {
+  func test_emptySearch_showsAllTools() {
+    // Given
+    let viewModel = ViewModel()
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    // When
+    viewModel.query = ""
+
+    // Then
+    XCTAssertFalse(viewModel.filteredData.isEmpty)
+  }
+
+    func test_searchQueryEqual_showsFilteredTool() {
+        // Given
+        let viewModel = ViewModel()
+        
+        // When
+        viewModel.query = "Pala"
+        
+        // Then
+        XCTAssertEqual(viewModel.filteredData[0], viewModel.query)
+    
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func test_searchQueryName_doesntShow () {
+        //Given
+        let viewModel = ViewModel()
+        
+        //When
+        viewModel.query = "Andres"
+        
+        //Then
+        XCTAssertTrue(viewModel.filteredData.isEmpty)
+        
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
+    
 }
