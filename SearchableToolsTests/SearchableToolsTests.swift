@@ -44,4 +44,16 @@ final class SearchableToolsTests: XCTestCase {
         
     }
     
+    func test_addButtonField () {
+        
+        let viewModel = ViewModel()
+        
+        viewModel.addItemName = "Prueba"
+        
+        let lastItem = viewModel.filteredData.count
+        
+        XCTAssertEqual(viewModel.filteredData[lastItem], viewModel.addedItem)
+        
+    }
+    
 }

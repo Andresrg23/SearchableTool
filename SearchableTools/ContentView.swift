@@ -10,8 +10,6 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject var viewModel = ViewModel()
-    @State var addItemName: String = " "
-    @State var addItem = false
     
     var body: some View {
         
@@ -23,32 +21,24 @@ struct ContentView: View {
                         Text(tool)
                     }
                 }
-                
             }
             .navigationTitle("SEARCH TOOLS")
             .foregroundColor(.blue)
             .searchable(text: $viewModel.query, prompt: "Search")
             .toolbar{
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: { self.addItem.toggle()}, label:{ Text("Add")})
+                    Button(action: { viewModel.addItem.toggle()}, label: {Image(systemName: "plus")})
                 }
             }
             
-        } .sheet(isPresented: $addItem) {
+        } .sheet(isPresented: $viewModel.addItem) {
             Text("Tool Name: ")
-            TextField("Add an Item", text: self.$addItemName)
-            Button(action: {
-                viewModel.tools.append(self.addItemName)
-                
-                self.addItem.toggle()
-                self.addItemName = ""
-                
-            }, label: {
-                Text("Add")
-            })
-        }
+            TextField("Add an Item", text: $viewModel.addItemName)
+            Button(action: {viewModel.addButton() }, label: {Text("Add")})
         }
         
+    }
+    
     
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
