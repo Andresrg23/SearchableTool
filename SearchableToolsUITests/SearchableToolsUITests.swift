@@ -21,15 +21,15 @@ final class SearchableToolsUITests: XCTestCase {
 
     }
     
-//    func test_addField_ToolName () {
-//        
-//        let app = XCUIApplication()
-//        app.launch()
-//        let addField = app.textFields["Add an Item"]
-//        addField.tap()
-//        addField.typeText("Prueba")
-//        app.buttons["Add"].tap()
-//        XCTAssertEqual(addField.value as! String, "Prueba")
-//    }
+    func test_addField_ToolName () {
+        
+        let app = XCUIApplication()
+        app.launch()
+        let addField = app.textFields["Add an Item"]
+        addField.tap()
+        addField.typeText("Prueba")
+        app.buttons["Add"].tap()
+        XCTAssertEqual(addField.value as! String, "Prueba")
+    }
 
 }
