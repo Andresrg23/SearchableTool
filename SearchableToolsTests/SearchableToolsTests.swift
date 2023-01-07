@@ -50,7 +50,11 @@ final class SearchableToolsTests: XCTestCase {
         
         viewModel.addItemName = "Prueba"
         
-        let lastItem = viewModel.filteredData.count
+        viewModel.addButton()
+        
+        var lastItem = viewModel.filteredData.count
+        
+        lastItem = lastItem - 1
         
         XCTAssertEqual(viewModel.filteredData[lastItem], viewModel.addedItem)
         

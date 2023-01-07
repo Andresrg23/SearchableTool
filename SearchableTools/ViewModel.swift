@@ -41,6 +41,7 @@ class ViewModel: ObservableObject {
     func addButton() {
         
         tools.append(addItemName)
+        addedItem = addItemName
         addItem.toggle()
         addItemName = ""
 
