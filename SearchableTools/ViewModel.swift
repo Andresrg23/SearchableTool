@@ -10,6 +10,9 @@ import Foundation
 
 class ViewModel: ObservableObject {
     
+    @Published var addItemName = ""
+    @Published var addedItem = " "
+    @Published var addItem = false
     @Published var query = ""
     @Published var tools = [
       "Martillo",
@@ -33,4 +36,16 @@ class ViewModel: ObservableObject {
         }
       }
     }
+    
+    
+    func addButton() {
+        
+        tools.append(addItemName)
+        addedItem = addItemName
+        addItem.toggle()
+        addItemName = ""
+
+    }
+    
+    
 }
