@@ -21,6 +21,10 @@ struct ContentView: View {
                         Text(tool)
                     }
                 }
+                .accessibilityIdentifier("List_of_tools")
+                .onDelete { IndexSet in
+                    viewModel.deleteTools(at: IndexSet)
+                }
             }
             .navigationTitle("SEARCH TOOLS")
             .foregroundColor(.blue)
@@ -31,10 +35,12 @@ struct ContentView: View {
                 }
             }
             
+            
         } .sheet(isPresented: $viewModel.addItem) {
             Text("Tool Name: ")
             TextField("Add an Item", text: $viewModel.addItemName)
             Button(action: {viewModel.addButton() }, label: {Text("Add")})
+                .accessibilityIdentifier("add_new_tool")
         }
         
     }
