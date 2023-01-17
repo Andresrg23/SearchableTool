@@ -47,5 +47,9 @@ class ViewModel: ObservableObject {
 
     }
     
+    func deleteTools(at offsets: IndexSet) {
+        tools.remove(atOffsets: offsets)
+    }
+    
     
 }

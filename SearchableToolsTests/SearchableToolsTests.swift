@@ -60,4 +60,18 @@ final class SearchableToolsTests: XCTestCase {
         
     }
     
+    func test_Delete_Tool () {
+        
+        let viewModel = ViewModel()
+        
+        let indexes: IndexSet = [0,0]
+        
+        viewModel.deleteTools(at: indexes)
+        
+        let newNumberOfTools = viewModel.tools.count
+        
+        XCTAssertEqual(9, newNumberOfTools)
+        
+    }
+    
 }
