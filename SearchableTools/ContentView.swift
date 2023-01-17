@@ -21,7 +21,6 @@ struct ContentView: View {
                         Text(tool)
                     }
                 }
-                .accessibilityIdentifier("List_of_tools")
                 .onDelete { IndexSet in
                     viewModel.deleteTools(at: IndexSet)
                 }

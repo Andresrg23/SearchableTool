@@ -39,10 +39,10 @@ final class SearchableToolsUITests: XCTestCase {
         
         let app = XCUIApplication()
         app.launch()
-        let deletedTool = app.navigationBars["List_of_tools"]
+        let deletedTool = app.staticTexts["Martillo"]
         deletedTool.swipeLeft()
-        
-        
+        app.buttons["Delete"].tap()
+        XCTAssertFalse(app.staticTexts["Martillo"].exists)
     }
     
 }
